@@ -1,0 +1,337 @@
+
+
+li{display: inline-block;}
+
+.god{margin-left: 25px; margin-top: 20px;}
+
+header{text-align: center;}
+
+.body{background-image: url(images/Background.jpg);}
+
+
+.table{
+    box-shadow: 12px 12px 20px 6px; 
+    font-size: 20px;
+    border-radius: 4px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+
+}
+.table-focus{
+
+    font-size: 20px;
+}
+
+thead{color: aliceblue; font-size: 25px; font:bold;}
+
+tbody{color: rgb(65, 65, 65); font-size: 18px;}
+
+.login-header{
+    font-size: larger;
+    text-align: right;
+}
+
+.login-page{
+    text-align: center;
+    padding: 60px;
+}
+
+.dropdown{display: inline-block;}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    width: 60px;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+
+.dropdown:hover .dropdown-content{display: block;}
+
+.dropdown-content a {
+    display: block;
+    color: black;
+    padding: 5px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.dropdown-content b {
+    display: block;
+    color: black;
+    padding: 5px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    color: #FFFFFF;
+    background-color:rgb(155, 155, 155);
+}
+
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    
+}
+
+.modal-content{
+    width: 600px;
+    height: 300px;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close{
+    position: absolute;
+    top: 0;
+    right: 105px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.logging-in{
+    border-color: red;
+    font-size: large;
+}
+
+.logging-in::placeholder{
+    font-size: small;
+}
+
+.login_page{
+background-color: rgb(183, 181, 181);
+justify-content: center;
+align-items: center;
+
+
+    
+}
+
+.login_bars{
+display: flex;
+justify-content: center;
+padding: 70px 0;
+display: block;
+}
+
+#post{
+    font-size: 24px;
+    margin-left: 40px;
+    padding: 5px;
+}
+
+#skloom{
+    display: block;
+    margin-left: 50px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.login-hidden-bar input{
+    border: none;
+    border-radius: 3px;
+    margin: 2px;
+}
+
+.success{
+    border: green;
+
+}
+
+.logincss{
+    border:green
+}
+
+.userstate input{
+    background-color: green;
+}
+
+.bg-modal-addemployee{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.modal-content-addemployee{
+    width: 600px;
+    height: 300px;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close-addemployee{
+    position: absolute;
+    top: 0;
+    right: 105px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.bg-modal-addemployeedeptt{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.modal-content-addemployeedeptt{
+    width: 600px;
+    height: 300px;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+
+
+.close-addemployeedeptt{
+    position: absolute;
+    top: 0;
+    right: 105px;
+    font-size: 50px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+
+#search-bar{
+    
+    display: inline-block;
+}
+
+#search-bar input{
+    font-size: 18px;
+    
+
+}
+
+#buutton-addemployeedeptt{
+    border-radius: 6px;
+    background-color: rgb(0, 164, 0);
+    box-shadow: inset 0px 0px 5px rgb(1, 223, 1);
+    border: 2px;
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-family: sans-serif;
+    color: wheat;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .05s;
+
+    
+
+}
+#buutton-addemployeedeptt:hover{
+    background-color: green;
+    box-shadow: inset 0px 0px 2px black
+}
+
+#buutton-addemployeedeptt:focus{
+    background-color: rgb(1, 89, 1);
+    box-shadow: inset 0px 0px 8px black;
+
+}
+
+
+.nav-header{
+    text-align: center;
+}
+
+    
+    
+
+.table-items-child{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.test{
+    display: flex;
+    justify-content: end;
+}
+
+#login-name{
+    font-size: 18px;
+    font-weight: 700;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-right: 12px;
+}
+
+#logout-button{
+    padding: 2px 14px;
+    border-radius: 4px;
+    border: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    background-color: antiquewhite;
+    box-shadow: inset 0px 0px 8px rgb(255, 255, 255);
+}
+
+#logout-button:hover{
+    background-color: rgba(250, 235, 215, 0.541);
+}
+
+#logout-button:focus{
+    box-shadow: inset 0px 0px 8px black;
+
+}
+
+#button{
+    padding: 2px 14px;
+    border-radius: 4px;
+    border: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    background-color: antiquewhite;
+    box-shadow: inset 0px 0px 8px rgb(255, 255, 255);
+}
+
+#button:hover{
+    background-color: rgba(250, 235, 215, 0.541);
+}
+
+#button:focus{
+    box-shadow: inset 0px 0px 8px black;
+
+}
+
+

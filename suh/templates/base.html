@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/main.css'%}">
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+    <title>{%block title%}Got em{%endblock title%}</title>
+</head>
+<body class="body">
+    <div class="nav-header">
+    <header>
+        <h1>{%block header%}Employee Database{%endblock header%}</h1>
+        <div class="test">
+            {% if user.is_authenticated %}
+            <div id="login-name">{{user.get_full_name}}</div>
+            <button type="button" id="logout-button" onclick= window.location.href="{%url 'logout'%}">Log Out</button> 
+            {% else %}
+                <button type="button" href1="#" id="button" class="button">Log in</button>
+        </div>
+            {% endif %}   
+        </header>
+    <nav class = 'io'>
+        <ul>
+            <div class='goop'>
+                <li><a href="#" id="button-addemployee" class="button-addemployee">Employee form</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'role' %}">Roles</a></li>
+            </div>
+        </ul>
+    </nav>
+    {%block content%}
+    {%endblock content%}
+    <script type="text/javascript" src="{% static 'js/loginmodal.js' %}"></script>
+    </div>
+</body>
+</html>
+

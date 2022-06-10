@@ -1,0 +1,46 @@
+
+<body>
+    <form method="get" name="search" class="test" hx-trigger="keyup">
+        {%csrf_token%}
+    </form>
+        <table class="table" border ="1" cellspacing ="5" id="holding">
+            <thead>
+                <td>Employee</td>
+                <td>Department</td>
+                <td>Roles</td>
+                <td>Salary</td>
+                <td>Start Date</td>
+            </thead>
+            <tbody>
+                    {% for x in cross %}
+                    <tr>
+                        <td><a href="/beep/{{ x.emp_id }}">{{x.emp.name}}</a></td>
+                        <td>{{x.dept.departments}}</td>
+                        <td>{{x.role.role}}</td>
+                        <td>{{x.salary}}</td>
+                        <td>{{x.start_date|default:"TBA"}}</td>
+                                {% if user.is_authenticated %}        
+                                <td>
+                                     <div class="dropdown">
+                                        <button>Edit</button>
+                                        <div class="dropdown-content">
+                                            <button  hx-target=".table" hx-delete="{% url 'delete' x.id %}" hx-select='.table'hx-swap="outerHTML">Delete</button>
+                                            <a href="update/{{x.id}}">Update</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                {% endif %}
+                    </tr> 
+
+                    {% endfor %}
+                    <script>
+                    </script>
+            </tbody>
+            <div id="hold"></div>
+        </table>
+        <script>
+            document.body.addEventListener('htmx:configRequest', function(evt) {
+            event.detail.headers['X-CSRFToken'] = '{{ csrf_token }}'; // add a new parameter into the mix
+            });
+        </script>
+</body>

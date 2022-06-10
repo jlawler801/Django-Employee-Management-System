@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table class="employee_table" border ="1" cellspacing ="5">
+            <thead>
+                <td>Name</td>
+                <td>Phone</td>
+                <td>Address</td>
+                <td>Country</td>
+            </thead>
+            <tbody>
+                    <tr>
+
+                        <td>{{form.name}}</td><td>{{form.phone}}</td>
+                        <td>{{form.address}}</td><td>{{form.country}}</td>
+                        <td><a href="delete/{{x.id}}">delete</a></td>
+
+                    </tr> 
+            </tbody>
+{% endblock content %}

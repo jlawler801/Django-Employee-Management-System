@@ -1,0 +1,60 @@
+{%extends "base.html"%}
+{% load static %}
+   
+{%block title%}Employee Database{%endblock title%}
+
+{%block content%}
+
+
+    <form method="get" hx-select=".table" hx-swap="outerHTML" name="search" hx-trigger="keyup" hx-get="{% url 'search' %}" hx-target=".table">
+        {%csrf_token%}
+        <div id="search-bar">
+            <div class="table-items-child">
+                <div class="items-child" id="items-child1">
+                {{ myFilter.form }}
+                </div>
+                <div class="items-child" id="items-child2">
+            <button type="button" href="#" id="buutton-addemployeedeptt" class="buutton-addemployeedeptt">Add User</button>
+                </div>
+        </div>
+        {%include 'search.html'%}
+
+
+
+
+
+<div class="bg-modal">
+    <div class="modal-content">
+        <div class="close">+</div>
+            <form action="login" method="POST">
+                <iframe id="myiframe" name="myFrame" height="350" width="70%"  style="border-radius: 4px; border: 2px; "src="{% url 'login' %}"></iframe>
+            </form>
+    </div>
+</div>
+
+<div class="bg-modal-addemployee">
+    <div class="modal-content-addemployee">
+        <div class="close-addemployee">+</div>
+            <form method="POST">
+            <iframe id="myiframe" name="myFrame" height="350" width="70%"  style="border-radius: 4px; border: 2px; "src="{% url 'game' %}"></iframe>
+        </form>
+    </div>
+</div>
+
+<div class="bg-modal-addemployeedeptt">
+    <div class="modal-content-addemployeedeptt">
+        <div class="close-addemployeedeptt">+</div>
+            <form method="POST">
+            <iframe id="myiframe" name="myFrame" height="350" width="70%"  style="border-radius: 4px; border: 2px; "src="{% url 'kroo' %}"></iframe>
+        </form>
+    </div>
+</div>
+
+
+
+<div id="holder">
+
+</div>
+{%endblock content%}
+
+
